@@ -1,0 +1,95 @@
+﻿
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="EXPIRES" CONTENT="-1">
+<META NAME="AUTHOR" CONTENT="NGUYỄN THANH XUÂN">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link href="<%=ctx %>system/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+<link href="<%=ctx %>system/styles/wijmo.css" rel="stylesheet" />
+<link href="<%=ctx %>system/styles/tserp.css?v=181006_003" rel="stylesheet" />
+<link href="<%=ctx %>system/styles/tserp-icon.css?v=181015_001" rel="stylesheet" />
+<link href="<%=ctx %>system/styles/tscore.css?v=181006_029" rel="stylesheet" />
+
+<script src="<%=ctx %>system/libs/crypto-js/3.1.9-1/core.js"></script>
+<script src="<%=ctx %>system//libs/crypto-js/3.1.9-1/enc-base64.js"></script>
+<script src="<%=ctx %>system//libs/crypto-js/3.1.9-1/md5.js"></script>
+<script src="<%=ctx %>system/libs/crypto-js/3.1.9-1/evpkdf.js"></script>
+<script src="<%=ctx %>system/libs/crypto-js/3.1.9-1/cipher-core.js"></script>
+<script src="<%=ctx %>system/libs/crypto-js/3.1.9-1/aes.js"></script>
+
+
+<script src="<%=ctx %>system/libs/wijmo/wijmo.min.js"></script>
+<script src="<%=ctx %>system/libs/wijmo/wijmo.input.min.js"></script>
+<script src="<%=ctx %>system/libs/wijmo/wijmo.nav.min.js"></script>
+<script src="<%=ctx %>system/libs/wijmo/wijmo.grid.min.js"></script>
+<script src="<%=ctx %>system/libs/wijmo/wijmo.grid.multirow.min.js"></script>
+<script src="<%=ctx %>system/libs/wijmo/wijmo.grid.filter.min.js"></script>
+<script src="<%=ctx %>system/libs/wijmo/wijmo.grid.detail.min.js"></script>
+
+
+<script src="<%=ctx %>system/controls/tserp.js"></script>
+<script src="<%=ctx %>system/controls/tserp.fwtabs.js"></script>
+<script src="<%=ctx %>system/controls/tserp.input.js"></script>
+<script src="<%=ctx %>system/controls/tserp.grid.js"></script>
+<script src="<%=ctx %>system/controls/tserp.contain.js"></script>
+<script src="<%=ctx %>system/controls/tserp.nav.js"></script>
+<script src="<%=ctx %>system/controls/tserp.components.js"></script>
+<script src="<%=ctx %>system/libs/system.js"></script>
+<script src="<%=ctx %>system/libs/lzw.js"></script>
+<script src="<%=ctx %>system/controls/tserp.data.js"></script>
+<script src="<%=ctx %>system/libs/moment/moment.js"></script>
+<script src="<%=ctx %>system/libs/app.js"></script>
+
+
+<script type="text/javascript">
+    function getPopupId(){
+        return System.getQueryParameter('popupId');
+    }
+	function TopOpenModal(url, width, height, wtile, caller, fnclosecallback, opt){
+		if(opt==null|| opt==undefined){
+			opt={showFooter:false};
+		}
+		top.System.OpenModalNew(url, width, height, wtile, caller, fnclosecallback, opt);
+	}
+</script>
+
+<!--style-->
+<style type="text/css">
+    .jqx-tabs-content-element {
+        overflow: inherit;
+    }
+
+    .noselect {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 10px !important;
+        padding-left: 5px !important;
+    }
+
+    .table {
+    }
+
+    .layoutContainer {
+        height: 100%;
+        width: 100%;
+        table-layout: inherit !important;
+    }
+
+    .gridContainer {
+        height: 100%;
+        width: 100%;
+    }
+</style>

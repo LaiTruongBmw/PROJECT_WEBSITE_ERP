@@ -1,0 +1,186 @@
+table.tab { 
+	color: #434444; font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:auto;
+	padding-top:4px; 
+	text-align:center; 
+	cursor:pointer;
+	/* display: table-cell; */
+	display:inline-block;
+	margin-top: -20px;
+} 
+
+table.tab  td.left{ 
+	background-image:url(../images/main/tab/tab_bground-l.gif);
+	background-repeat: repeat-x;
+	color: #434444; font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:6px;
+	padding-top:4px; 
+	text-align:center; 
+	cursor:pointer;
+	margin-top: -2px;
+}
+table.tab  td.middile{ 
+	background-image:url(../images/main/tab/tab_bground-m.gif);
+	background-repeat: repeat-x;
+	color: #434444; font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:auto;
+	padding-top:4px; 
+	text-align:center; 
+	cursor:pointer;
+	margin-top: -20px;
+}
+table.tab  td.right{ 
+	background-image:url(../images/main/tab/tab_bground-r.gif);
+	background-repeat: repeat-x;
+	color: #434444; font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:6px;
+	padding-top:4px; 
+	text-align:center; 
+	cursor:pointer;
+	margin-top: -20px;
+}
+
+span.activeTab::BEFORE {
+    color: red;
+    width:15px;
+    background-image:url(../images/main/tab/tab_bground.png);color: #434444; font-size:11px; cursor:hand;height:24;width:150;padding-top:4px; text-align:center; cursor:pointer;
+
+}
+
+
+span.activeTab::after {
+    color: red;
+    width:5px;
+    background-image:url(../images/main/tab/tab_bground.png);color: #434444; font-size:11px; cursor:hand;height:24;width:150;padding-top:4px; text-align:center; cursor:pointer;
+
+}
+.activeTab { 
+  /*   background-image: url(../images/main/tab/tab_bground_select.png); */
+    color: #434444;
+    font-size: 11px;
+    cursor: pointer;
+    height: 28px;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+
+table.activeTab { 
+      /* background-image: url(../images/main/tab/tab_bground_select.png); */
+    color: #434444;
+    font-size: 11px;
+    cursor: pointer;
+    height: 28px;
+    width: auto;
+    /* padding-top: 5px; */
+    /* padding-bottom: 20px; */
+    text-align: center;
+    margin-top: -2px;
+    /* display: table-cell; */
+    display:inline-block;
+}
+table.activeTab  td.left { 
+    background-image: url(../images/main/tab/tab_bground_sel_l.gif);
+    background-repeat: repeat-x;
+    color: #434444;
+    font-size: 11px;
+    cursor: pointer;
+    height: 28px;
+    width: 6px;
+    /* padding-top: 5px; */
+    /* padding-bottom: 20px; */
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -20px;
+}
+table.activeTab  td.middile { 
+    background-image: url(../images/main/tab/tab_bground_sel_m.gif);
+    background-repeat: repeat-x;
+    color: #434444;
+    font-size: 11px;
+    cursor: pointer;
+    height: 28px;
+    width: auto;
+    /* padding-top: 5px; */
+    /* padding-bottom: 20px; */
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -20px;
+}
+
+table.activeTab  td.right { 
+    background-image: url(../images/main/tab/tab_bground_sel_r.gif);
+    background-repeat: repeat-x;
+    color: #434444;
+    font-size: 11px;
+    cursor: pointer;
+    height: 28px;
+    width: 6px;
+    /* padding-top: 5px; */
+    /* padding-bottom: 20px; */
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -20px;
+}
+
+
+table.overTab { 
+	/* background-image:url(../images/main/tab/tab_bground_over.png); */
+	color: #434444;
+	font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:auto;
+	padding-top:4px; 
+	text-align:center;
+	margin-top: -2px;
+    /* display: table-cell; */
+    display:inline-block;
+}
+
+table.overTab td.left  { 
+	background-image:url(../images/main/tab/tab_bground_over-l.gif);
+	background-repeat: repeat-x;
+	color: #434444;
+	font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:6px;
+	padding-top:4px; 
+	text-align:center;
+}
+table.overTab td.middile  { 
+	background-image:url(../images/main/tab/tab_bground_over-m.gif);
+	background-repeat: repeat-x;
+	color: #434444;
+	font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:auto;
+	padding-top:4px; 
+	text-align:center;
+} 
+table.overTab td.right  { 
+	background-image:url(../images/main/tab/tab_bground_over-r.gif);
+	background-repeat: repeat-x;
+	color: #434444;
+	font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:6px;
+	padding-top:4px; 
+	text-align:center;
+} 
+
+
+

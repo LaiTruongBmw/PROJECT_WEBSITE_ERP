@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+select.Year {
+		height:inherit;
+	    width: 51px;
+	    padding: 0px;
+	    margin: 0px;
+	    display: inline-flex;
+}
+select.Month {
+		height:inherit;
+	    width: 38px;
+	    padding: 0px;
+	    margin: 0px;
+	    display: inline-flex;
+}
+
+select.Day {
+		height:inherit;
+	    width: 38px;
+	    padding: 0px;
+	    margin: 0px;
+	    display: inline-flex;
+}

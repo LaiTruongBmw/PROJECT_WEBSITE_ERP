@@ -1,0 +1,1416 @@
+html, body{
+	padding: 0 0 0 0;
+	width:100%;
+	height:100%;
+	overflow-y:auto;
+	margin: 0 0 0 0;
+	/* overflow: hidden; */
+	  background-color: transparent;
+	  -webkit-user-select: none;
+	  -webkit-user-modify: read-only; 
+	  font-family: Verdana,Arial,sans-serif;
+}
+table{
+	/* table-layout: fixed; */
+	width:100%;
+	background-color: #ffffff;
+	font-size:14px;
+	border-spacing: 0px;
+}
+table td > div {
+    /* overflow: auto; */
+    height: 100%;
+}
+
+td{
+	/* vertical-align: top; */	
+}
+
+/* WJ Control */
+.esys-content.esys-dropdown, .esys-content.esys-inputnumber, .esys-content.esys-inputmask, .esys-content.esys-calendar-outer, .esys-content.esys-pager , .esys-content.esys-textbox,{
+    display: inline-table;
+}
+.esys-content {
+	/* Primary esys control style - applies to all controls */
+	display: inline-block;
+	border: 1px solid #7c93b7;
+	border-radius: 4px;
+	background-color: #fff;
+	outline: none;
+}
+
+.esys-control {
+	outline: none;
+}
+
+
+.esys-header {
+	/* Define control header */
+	background-color: #f7f4df ;/* E0E9F5 ;#BDE9FF;  #EAEAEA;*/
+	color: #444;
+	font-weight: bold;
+}
+
+.esys-state-selected {
+	/* Selected state colors */
+	background-color: #0085c7;
+	color: #fff;
+}
+
+.esys-state-multi-selected {
+	/* Selected state colors */
+	background-color: #80ADBF;
+	color: #fff;
+}
+
+.esys-state-disabled {
+	/* Fade disabled state */
+	opacity: 0.5;
+}
+
+.esys-control[disabled] {
+	/* HTML disabled controls */
+	background-color: #eeeeee;
+	opacity: .5;
+}
+
+/* Button Styles */
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+	/* Basic style for all button types */
+	-webkit-appearance: button;
+	overflow: visible;
+	border-radius: inherit;
+	cursor: pointer;
+}
+input:hover{
+box-shadow: 0 0 2px #719ECE;
+}
+.esys-btn {
+	/* Global base button style */
+	display: block;
+	padding: 4px 10px;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.esys-btn-default {
+	/* Additional styling for a 'default' button */
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: transparent;
+	color: inherit;
+	font-weight: bold;
+}
+
+	.esys-btn-default:hover {
+		/* Hover on 'default' button */
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	.esys-btn-default:focus {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+/* Button Group Styles */
+
+.esys-btn-group, .esys-btn-group-vertical {
+	/* Define button group based on bootstrap */
+	position: relative;
+	display: inline-block;
+	border-radius: 4px;
+	vertical-align: top;
+}
+
+	.esys-btn-group > .esys-btn, .esys-btn-group-vertical > .esys-btn {
+		/* Float buttons in group */
+		position: relative;
+		float: left;
+	}
+
+		.esys-btn-group > .esys-btn:not(:first-child):not(:last-child) {
+			/* Remove inner button border radius */
+			border-radius: 0;
+		}
+
+		.esys-btn-group > .esys-btn:first-child {
+			margin-left: 0;
+		}
+
+			.esys-btn-group > .esys-btn:first-child:not(:last-child) {
+				/* Remove first button right-side border radius and margin */
+				border-right: none;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+		.esys-btn-group > .esys-btn:last-child:not(:first-child) {
+			/* Remove last button left-side border radius and margin */
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+	.esys-btn-group .esys-btn + .esys-btn, .esys-btn-group .esys-btn + .esys-btn-group, .esys-btn-group .esys-btn-group + .esys-btn, .esys-btn-group .esys-btn-group + .esys-btn-group {
+		/* Remove margin from inner buttons to prevent double border */
+		margin-left: -1px;
+	}
+
+/* ListBox Styles */
+
+.esys-listbox {
+	overflow: auto;
+}
+
+.esys-listbox-item {
+	padding: 3px 10px;
+}
+
+	.esys-listbox-item:not(.esys-state-selected):not(.esys-separator):hover {
+		background-color: rgba(0,0,0,.05);
+	}
+
+	.esys-listbox .esys-listbox-item label {
+		font-weight: normal;
+		margin: 0px;
+	}
+
+.esys-dropdown .esys-listbox {
+	padding: 0;
+	white-space: nowrap;
+}
+
+/* Dropdown Styles */
+
+.esys-dropdown {
+	vertical-align: middle;
+}
+
+	.esys-dropdown .esys-template, .esys-dropdown .esys-dropdown-menu {
+		border-radius: inherit;
+	}
+
+.esys-template {
+	height: 100%;
+}
+
+.esys-dropdown-panel {
+	outline: none;
+	box-shadow: 0 6px 13px rgba(0,0,0,0.2);
+	/* Boostrap modals have zIndex 1050, so go higher */
+	z-index: 1500 !important;
+}
+
+
+/* Input Group Styles */
+
+.esys-inputnumber {
+	vertical-align: middle;
+}
+
+input::-ms-clear {
+	/* Eliminate clear icon from IE textbox */
+	display: none;
+}
+
+button, input, optgroup, select, textarea {
+	/* Remove default browser focus outlines */
+	outline: 0;
+}
+
+.esys-input-group-btn, .esys-input-group .esys-form-control {
+	box-sizing: border-box;
+	display: table-cell;
+}
+
+.esys-button-group-btn, .esys-button-group .esys-form-control {
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.esys-input {
+	height: 100%;
+	overflow: hidden;
+}
+
+
+
+.esys-input-group {
+	/* Define input group based on bootstrap */
+	position: relative;
+	display: table;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	border-collapse: separate;
+	border-radius: 4px;
+	background: inherit;
+	border-spacing: 0;
+}
+
+.esys-button-group {
+	/* Define button group based on bootstrap */
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	border-collapse: separate;
+	border-radius: 4px;
+	background: inherit;
+}
+.esys-checkbox-group {
+	/* Define button group based on bootstrap */
+	position: relative;
+	display: table;
+	/*overflow: hidden;*/
+	width: 100%;
+	height: 100%;
+	border-collapse: separate;
+	border-radius: 4px;
+	background: inherit;
+}
+	.esys-input-group .esys-form-control {
+		/* Style for text input box in group */
+		position: relative;
+		float: left;
+		padding: 4px 8px;
+		width: 100%;
+		height: 100%;
+		border: none;
+		border-radius: 0;
+		background-color: transparent;
+		color: inherit;
+	}
+	.esys-checkbox-group .esys-form-control {
+		/* Style for text input box in group */
+		position: relative;
+		float: right;
+		padding: 0px;
+		width: 100%;
+		height: 100%;
+		border: none;
+		border-radius: 0;
+		background-color: transparent;
+		color: inherit;
+        margin:0px;
+	}
+
+    button.esys-form-control {
+        /*height:25px !important;*/
+    }
+button > img {
+    width: 21px;
+    height: 21px;
+}
+.esys-button-group .esys-form-control {
+		/* Style for text input box in group */
+		/*position: relative;
+		//float: left;*/
+		/* padding: 4px 8px; */
+		width: 100%;
+		height: 100%;
+		/*border: none;
+		border-radius: 0;*/
+		background-color: transparent;
+		/* color: inherit; */
+		 
+		/* border-bottom-style: window-inset;
+		border-bottom-width: 0.1px;
+		border-right-width: 0.1px;
+		border-right-style: window-inset;  */
+		font-family: Verdana,Arial,sans-serif;
+	    font-style: normal;
+	    font-size: 13px;
+		border: none;
+		
+	}
+
+		.esys-input-group .esys-form-control.esys-numeric {
+			/* Text alignment for numeric input types */
+			text-align: right;
+		}
+
+	.esys-input-group div[esys-part='header'] {
+		/* Adjust float and width for Menu control */
+		float: none;
+		width: auto;
+		vertical-align: middle;
+	}
+
+.esys-input-group-btn > .esys-btn {
+	/* Remove border from outside of buttons - outer border set at esys-content level */
+	border-width: 0;
+}
+
+.esys-input-group-btn:first-child > .esys-btn {
+	/* Remove first button right-side border radius */
+	border-right-width: 1px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.esys-input-group-btn:last-child > .esys-btn {
+	/* Remove last button left-side border radius */
+	border-left-width: 1px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.esys-input-group-btn > .esys-button {
+	/* Remove border from outside of buttons - outer border set at esys-content level */
+	border-width: 0;
+}
+
+.esys-input-group-btn:first-child > .esys-button {
+	/* Remove first button right-side border radius */
+	border-width: 1px;
+	border-radius: 2px;
+}
+
+.esys-input-group-btn:last-child > .esys-button {
+	/* Remove last button left-side border radius */
+	border-width: 1px;
+	border-radius: 2px;
+}
+
+.esys-input-group-btn {
+	/* Style for buttons in group */
+	position: relative;
+	width: 24px;
+	height: 100%;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+/* Pager Styles */
+
+.esys-pager {
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+	.esys-pager .esys-input-group-btn > .esys-btn {
+		min-width: 40px;
+	}
+
+	.esys-pager .esys-btn[disabled] span {
+		opacity: .5;
+		cursor: default;
+	}
+
+	.esys-pager .esys-form-control {
+		text-align: center;
+		border-left: 1px solid rgba(0, 0, 0, 0.2);
+		border-right: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+/* Calendar Date Input Styles */
+
+.esys-calendar-outer {
+	/* Outer padding for calendar control */
+	display: block;
+	/*padding: 10px;
+	width: 100%;*/
+	height: auto;
+}
+
+.esys-calendar td {
+	text-align: center;
+}
+
+.esys-dropdown-panel .esys-calendar-outer {
+	/* Remove background, border when in dropdown */
+	border: 0;
+	background: none;
+}
+
+/* -- Date selection -- */
+
+.esys-calendar-header {
+	/* Added padding to bottom of date selection options */
+	display: block;
+	padding: 0 0 15px 0;
+	width: 100%;
+}
+
+.esys-month-select {
+	/* Float month selection to the left */
+	display: inline-block;
+	float: left;
+	/* Cursor for month selection */
+	cursor: pointer;
+		    border-radius: 3px;
+    height: 1.5em;
+    line-height: 1.5em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-right: 3px;
+    padding-left: 3px;
+    background-color: #E0E9F5;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.esys-calendar-header .esys-btn-group {
+	/* Float calendar button group to the right */
+	display: inline-block;
+	float: right;
+	margin-bottom: 7px;
+}
+
+	.esys-calendar-header .esys-btn-group .esys-btn {
+		/* Size button group in calendar header */
+		padding: 0 8px 1px 8px;
+		min-height: 25px;
+	}
+
+/* -- Days of the month -- */
+
+.esys-calendar-month {
+	box-sizing: border-box;
+	width: 100%;
+	border-collapse: collapse;
+	font: inherit;
+}
+
+	.esys-calendar-month td {
+		width: 14.29%;
+		padding: 5px 0;
+		border: none;
+	}
+
+	.esys-calendar-month .esys-header {
+		/* Slightly reduce size of text in calendar header */
+		font-size: 90%;
+	}
+
+/* -- Months of the year -- */
+
+.esys-calendar-year {
+	box-sizing: border-box;
+	width: 100%;
+	border-collapse: collapse;
+	font: inherit;
+}
+
+	.esys-calendar-year td {
+		width: 25%;
+		padding: 8px;
+		border: none;
+	}
+
+/* -- FlexGrid -- */
+
+.esys-flexgrid {
+	width: 100%;
+	overflow: hidden;
+}
+
+.esys-cell {
+	position: absolute;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 3px;
+	border-right: 1px solid #a4bed4; /*#c6c6c6;*/
+	border-bottom: 1px solid #a4bed4; /*#c6c6c6;*/
+}
+
+.esys-cell.esys-state-selected .esys-control, .esys-cell.esys-state-multi-selected .esys-control {
+	/* Text color for nested controls in a selected row */
+	color: #444;
+}
+
+[dir="rtl"] .esys-cell {
+	border-left: 1px solid #c6c6c6;
+	border-right: none;
+}
+
+.esys-cell.esys-wrap {
+	white-space: normal;
+	text-overflow: clip;
+}
+
+.esys-grid-editor {
+	padding: 3px;
+	border: none;
+	width: 100%;
+	margin: 0px;
+}
+
+.esys-cell:not(.esys-header):not(.esys-group):not(.esys-alt):not(.esys-state-selected):not(.esys-state-multi-selected) {
+	/* Default grid cell color */
+	background: #fff;
+}
+
+.esys-alt:not(.esys-header):not(.esys-group):not(.esys-state-selected):not(.esys-state-multi-selected) {
+	/* Alternate grid cell color */
+	background: #f9f9f9;
+}
+
+.esys-frozen-row {
+    border-bottom: 1px solid #666;
+}
+
+.esys-frozen-col {
+    border-right: 1px solid #666;
+}
+
+[dir="rtl"] .esys-frozen-col {
+    border-left: 1px solid #666;
+    border-right: none;
+}
+
+.esys-flexgrid .esys-group {
+	background-color: #dddddd;
+}
+
+.esys-flexgrid .esys-marker {
+	position: absolute;
+	background-color: #0085c7;
+	opacity: 0.5;
+}
+
+/* remove spinner buttons from InputNumber control */
+.esys-inputnumber input[type=number]::-webkit-inner-spin-button,
+.esys-inputnumber input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* FlexGrid Filter extension */
+
+.esys-columnfiltereditor {
+	padding: 10px;
+	min-width: 230px;
+}
+
+	.esys-columnfiltereditor .esys-control {
+		margin-bottom: 6px;
+		width: 100%;
+	}
+
+	.esys-columnfiltereditor a[esys-part^="btn-"] {
+		background: #e6e6e6;
+		padding: 6px 20px;
+		color: #444;
+		display: inline-block;
+		margin-top: 5px;
+		text-decoration: none;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+		.esys-columnfiltereditor a[esys-part^="btn-"]:hover {
+			text-decoration: none;
+			background: #e0e0e0;
+		}
+
+/* FlexGrid GroupPanel extension */
+.esys-grouppanel {
+	background-color: #f4f4f4;
+	padding: 15px;
+}
+
+	.esys-grouppanel .esys-cell {
+		margin-right: 10px;
+		padding: 6px 16px;
+		border: 1px solid #e6e6e6;
+		cursor: pointer;
+	}
+
+		.esys-grouppanel .esys-cell:hover {
+			background: #e0e0e0;
+		}
+
+/* WJ Tooltip */
+
+.esys-tooltip {
+	position: absolute;
+	z-index: 1000;
+	top: 0px;
+	left: 0px;
+	pointer-events: none;
+	max-width: 400px;
+	padding: 6px;
+	background-color: #ffffe5;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 6px;
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+/* Chart Styles */
+
+.esys-flexchart {
+	height: 400px;
+	padding: 15px 10px;
+	margin-bottom: 12px;
+	background-color: white;
+	border: 1px solid #e4e4e4;
+}
+
+	.esys-flexchart .esys-title {
+	}
+
+	.esys-flexchart .esys-header {
+	}
+
+		.esys-flexchart .esys-header .esys-title {
+			font-size: 16pt;
+			fill: #666;
+			font-weight: normal;
+		}
+
+	.esys-flexchart .esys-footer {
+	}
+
+		.esys-flexchart .esys-footer .esys-title {
+			fill: #666;
+			font-weight: normal;
+		}
+
+	.esys-flexchart .esys-plot-area {
+	}
+
+	.esys-flexchart .esys-legend .esys-label {
+		fill: #666;
+	}
+
+  	.esys-flexchart .esys-data-label {
+		fill: #666;
+	}
+
+    .esys-flexchart .esys-data-label-border {
+        stroke: rgba(128, 128, 128, 0.5);
+	}
+
+	.esys-flexchart .esys-axis-x .esys-title,
+	.esys-flexchart .esys-axis-y .esys-title {
+		font-style: italic;
+	}
+
+	/* style for selected items on the chart */
+	.esys-flexchart .esys-state-selected {
+		stroke-width: 3px;
+		stroke-dasharray: 6;
+		stroke-linecap: square;
+	}
+
+/* style for selected items on the chart - smaller screens */
+@media(max-width: 1025px) {
+	.esys-flexchart .esys-state-selected {
+		stroke-width: 2px;
+		stroke-dasharray: 4;
+	}
+}
+
+@media(max-width: 767px) {
+	esys-flexchart .esys-state-selected {
+		stroke-width: 1px;
+		stroke-dasharray: 3;
+	}
+}
+
+/* X Axis  */
+
+.esys-flexchart .esys-axis-x {
+}
+
+	.esys-flexchart .esys-axis-x .esys-label {
+		fill: #666;
+	}
+
+	/* bottom line */
+	.esys-flexchart .esys-axis-x .esys-line {
+		stroke: #aaa;
+		stroke-width: 1;
+	}
+
+	/* bottom tick */
+	.esys-flexchart .esys-axis-x .esys-tick {
+		stroke: #aaa;
+		stroke-width: 1;
+	}
+
+	/* none */
+	.esys-flexchart .esys-axis-x .esys-gridline {
+		stroke: black;
+		stroke-width: 0.25pt;
+	}
+
+    /* minor tick */
+  	.esys-flexchart .esys-axis-x .esys-tick-minor {
+		stroke: #aaa;
+		stroke-width: 1;
+	}
+
+    /* minor grid line */
+  	.esys-flexchart .esys-axis-x .esys-gridline-minor {
+		stroke: black;
+		stroke-dasharray: 6;
+		stroke-width: 0.25pt;
+	}
+
+/* Y Axis */
+
+.esys-flexchart .esys-axis-y {
+}
+
+	/* labels down y axis */
+	.esys-flexchart .esys-axis-y .esys-label {
+		fill: #666;
+	}
+
+	.esys-flexchart .esys-axis-y .esys-tick {
+		stroke: #aaa;
+		stroke-width: 1;
+	}
+
+	/* bg horiz lines */
+	.esys-flexchart .esys-axis-y .esys-gridline {
+		stroke: #777;
+		stroke-width: 0.25pt;
+	}
+
+    /* minor tick */
+  	.esys-flexchart .esys-axis-y .esys-tick-minor {
+		stroke: #aaa;
+		stroke-width: 1;
+	}
+
+	/* minor grid line */
+  	.esys-flexchart .esys-axis-y .esys-gridline-minor {
+		stroke: black;
+        stroke-dasharray: 6;
+		stroke-width: 0.25pt;
+	}
+     
+/* range selector */     
+.esys-flexchart .esys-rangeselector {
+   visibility: hidden;
+   position: relative;
+}     
+
+.esys-flexchart .esys-rangeselector .esys-scroller {     
+   border: 2px solid Gray;     
+   position: absolute;     
+   display: block;     
+   background-color: whitesmoke;
+   opacity: 0.6;
+		border-radius: 0.5em;
+   touch-action: none;
+}
+
+.esys-flexchart .esys-rangeselector .esys-hscroller {     
+    width: 20px;                   
+}
+
+.esys-flexchart .esys-rangeselector .esys-vscroller {     
+    height: 20px;                
+}
+
+.esys-flexchart .esys-rangeselector .esys-scroller-center {     
+   background: rgba(128, 128, 128, 0.1);     
+   position: absolute;     
+   display: block; 
+   touch-action: none;
+}
+
+/* chart marker */
+
+.esys-flexchart .esys-chart-linemarker {     
+   background: rgba(128, 128, 128, 0.3);     
+   position: absolute;     
+   padding: 2px;
+}
+
+.esys-flexchart .esys-chart-linemarker-container {
+	position: relative;
+}
+
+.esys-flexchart .esys-chart-linemarker .esys-chart-linemarker-hline {     
+    height: 2px;
+    background: rgba(128, 128, 128, 1);
+    touch-action: none;
+	position: absolute;
+}
+
+.esys-flexchart .esys-chart-linemarker .esys-chart-linemarker-vline {     
+    width: 2px;   
+    background: rgba(128, 128, 128, 1);   
+    touch-action: none;
+	position: absolute;
+}
+
+.esys-flexchart.esys-chart-linemarker-draggable,
+.esys-flexchart .esys-chart-linemarker .esys-chart-linemarker-draggable {     
+    -moz-user-select:none;
+	-khtml-user-drag:element;
+	cursor:move;
+}
+
+/* Gauges */
+
+.esys-gauge {
+	overflow: hidden;
+}
+
+	.esys-gauge:focus {
+		outline: none;
+	}
+
+	.esys-gauge .esys-face path {
+		fill: #f5f5f5;
+		stroke: #cbcbcb;
+		stroke-width: 1;
+		stroke-linejoin: round;
+	}
+
+	.esys-gauge .esys-pointer {
+		fill: #0085c7;
+	}
+
+	.esys-gauge .esys-min, .esys-max {
+		font-size: 60%;
+		opacity: .5;
+	}
+
+.esys-radialgauge .esys-value {
+	font-size: 150%;
+}
+
+.esys-lineargauge {
+	height: 1.2em;
+}
+
+/* ColorPicker */
+
+.esys-colorpicker {
+	width: 420px;
+	height: 200px;
+	padding: 4px;
+}
+
+.esys-colorbox {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* TreeView*/
+
+/*.esys-treeview-path {
+    height: 1em;
+}*/
+
+.esys-treenode {
+    display: block;
+}
+
+.esys-treenode .esys-treenode {
+    margin-left: 2em;
+}
+
+.esys-treenode-label {
+    cursor: pointer;
+    margin: 0.5em;
+}
+
+/* CheckBox */
+.esys-checkbox {
+        font-weight: bold;
+    text-align: center;
+    line-height: 1em;
+    cursor: pointer;
+    width: 1.3em;
+    height: 1.3em;
+    border: 0px;
+    background-color: transparent;
+}
+
+/* *******************GW Panel  *******************/
+.esys-panel  {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1em;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid gray; */
+    border:none;
+}
+
+.esys-pannel-header{
+	height: 19px;
+	text-align: left;
+}
+.esys-panel-content{
+	font-weight: bold;
+    text-align: center;
+    line-height: 1em;
+    width: 100%;
+    height: 101%;
+    /* border: 1px solid gray; */
+    border:none;
+}
+/* Glyphs */
+
+.esys-glyph-up {
+	display: inline-block;
+	border-right: .4em solid transparent;
+	border-bottom: .5em solid;
+	border-left: .4em solid transparent;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-down {
+	display: inline-block;
+	border-top: .5em solid;
+	border-right: .4em solid transparent;
+	border-left: .4em solid transparent;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-left {
+	display: inline-block;
+	border-top: .4em solid transparent;
+	border-right: .5em solid;
+	border-bottom: .4em solid transparent;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-right {
+	display: inline-block;
+	border-top: .4em solid transparent;
+	border-bottom: .4em solid transparent;
+	border-left: .5em solid;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-down-left {
+	display: inline-block;
+	border-top: .65em solid transparent;
+	border-left: .65em solid;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-down-right {
+	display: inline-block;
+	border-bottom: .65em solid;
+	border-left: .65em solid transparent;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-up-left {
+	display: inline-block;
+	border-bottom: .65em solid transparent;
+	border-left: .65em solid;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-up-right {
+	display: inline-block;
+	border-top: .65em solid;
+	border-left: .65em solid transparent;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-circle {
+	display: inline-block;
+	border: .25em solid;
+	border-radius: 1em;
+	transform: translateY(-.1em);
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-square {
+	display: inline-block;
+	border: .25em solid;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-diamond {
+	display: inline-block;
+	border: .25em solid;
+	transform: rotate(45deg);
+	transform-origin: 50% 50%;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-check {
+	position: relative;
+	display: inline-block;
+	width: .75em;
+	height: .75em;
+	border-right: .3em solid;
+	border-bottom: .22em solid;
+	transform: rotate(35deg) scaleX(.5);
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.esys-glyph-filter {
+	position: relative;
+	box-sizing: border-box;
+	display: inline-block;
+	top: -.1em;
+	width: .5em;
+	border-top: .5em solid;
+	border-right: .4em solid transparent;
+	border-left: .4em solid transparent;
+	opacity: 0.75;
+	cursor: pointer;
+}
+.esys-glyph-filter:after {
+	position: absolute;
+	    box-sizing: border-box;
+	border: .12em solid;
+	width: .12em;
+	height: .4em;
+	transform: translateX(-50%);
+	top: -.2em;
+	content: "";
+}
+    [dir="rtl"] .esys-glyph-filter:after {
+	    transform: translateX(50%);
+    }
+
+
+
+/*APP SETTING*/
+ 
+general {
+    background-color: white  !important;
+    color: #000000  !important;
+}
+.filter{
+    background-color:#EBEBEB !important;
+    color: #000000 !important;
+
+}
+.mandatory {
+    background-color: #FFFAAF !important;
+    color: #000000 !important;
+}
+
+
+
+/********************************ICON****************/
+
+.esys-icon-group {
+    position: relative;
+    display: inline-block;
+    /* overflow: hidden; */
+    width: 24px;
+    height: 24px;
+    border-collapse: separate;
+    border-radius: 4px;
+    background: inherit;
+}
+
+
+
+.gw-icon
+{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: default;
+    color: #3b5998 !important;
+}
+
+.gw-icon button:disabled > span {  
+    color:#bbb;
+
+}
+
+.gw-icon button {
+	/*padding-left: 20px;*/
+    /*padding-top: 7px;*/
+    margin: 0 0 0 0;
+    border: none;
+    background-color: #e0e9f5;
+    width:100%;
+    height:100%
+    /*padding-bottom: 4px;
+    padding-right: 6px;*/
+    
+}
+ 
+
+/*.gw-icon button:before {
+    font-size: 16px;
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.gw-icon button:after {
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    pointer-events: none;
+}*/
+
+
+
+.gw-icon button:hover
+{
+    cursor: pointer;
+    color: #009fe3 !important;
+}
+
+.gw-icon button:active
+{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #3b5998;
+}
+ 
+
+
+/**********************POPUP***************/
+
+.esys-popup {
+    background-color: #fff;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    z-index: 1500;
+    margin: 2px 0;
+}
+
+.esys-popup-backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1500;
+    background-color: rgba(0,0,0,.5);
+}
+
+.modal-header {
+    min-height: 16.43px;
+    height:1%;
+    padding: 5px;
+    border-bottom: 1px solid #e5e5e5;
+    margin:0px;
+    background-color: #5198c1;
+}
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+.modal-body {
+    position: relative;
+    padding: 5px;
+    height:98%;
+}
+.modal-footer {
+    height:1%;
+    padding: 5px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+/**ESYS GRID STATUS*/
+.esys-grid-row_status-deleted {
+    background-color: #EEEEEE !important;
+    color: #808080 !important;
+}
+.esys-grid-row_status-edited{
+    background-color: #EEEEEE !important;
+    color: #808080 !important;
+}
+.esys-grid-row_status-added{
+    background-color: #EEEEEE !important;
+    color: #808080 !important;
+}
+/**ESYS GRID STATUS*/
+
+
+/*.input-month > div {
+    position: absolute;
+    z-index: 1222222222222;
+    width: 89%;
+}
+.input-month > div > div {
+    
+    z-index: 1222222222222;
+    width: 89%;
+}*/
+/*GENUWIN DATEBOX*/
+.date-box {
+    width:160px !important;
+	height: 24px !important;
+}
+.year-box {
+    width:122px !important;
+	height: 24px !important;
+}
+
+.month-box {
+    width:140px  !important;
+	height: 24px !important;
+}
+
+.input-month{
+	display:inline-table;
+	width:120px !important;
+	height: 24px !important;
+	
+}
+
+.input-month > div > div > div > input {
+    width:85px !important;
+    padding: 2px 8px !important;
+}
+.esys-list {
+    height:24px;
+}
+
+.esys-list > div > div > select {
+	padding: 0px 0px !important;
+}
+.esys-content .esys-dropdown-panel .esys-control .esys-calendar {
+	width: 150px !important;
+}
+
+.esys-textbox{
+	height: 24px !important;
+}
+
+.input-time{
+	position: relative;
+	height: 24px;
+	width: 90px;
+}
+
+
+ 
+
+/*css style for IE*/
+ select[disabled='disabled']::-ms-value {
+     background-color:#eeeeee;
+    opacity:.5
+ }
+ /*Specific to chrome and firefox*/
+ select[disabled='disabled'] {
+     background-color:#eeeeee;
+    opacity:.5
+ }
+ 
+ 
+ /**UPLOAD INLINE*/
+.plftoggleFilelist {
+    height: 100%;
+    margin: 0 0 0 0;
+}
+ul.plftoggleFilelist > li {
+    text-align: left;
+}
+ 
+ /*GENUWIN BUTTON*/
+ .esys-button {
+	height: 100%;
+	overflow: hidden;
+	background-color: #e0e9f5;
+    border: 0.5px solid #a4bed4;
+    white-space: nowrap;
+}
+div.esys-button > div > div > button > span{
+	vertical-align: 30%;
+}
+.esys-button:HOVER{
+	background-color:#cfdde9
+}
+
+/*GENUWIN MAIN TAB*/
+.tab-close-icon{
+	vertical-align: top !important;
+    width: 5px;
+    font-size:1.3em;
+}
+.tab-close-icon i:HOVER{
+  color : #a00101;
+}
+.tab-close-icon img {
+	cursor: hand;
+    width: 10px;
+    /* position: absolute; */
+}
+
+.tab-close-icon img:HOVER {
+    background-color: aliceblue;
+}
+
+div[div.esys-content   div    div   input:focus]{
+	border: 1px solid #689AEE; 
+	border-radius:4px;
+}
+
+/*GENUWIN GRID MERGE*/
+.esys-header-merge{
+	table-layout:fixed;
+	display:table !important;
+}
+
+
+div {
+    -webkit-user-select : none;
+    -moz-user-select    : none;
+    -khtml-user-select  : none;
+    -ms-user-select     : none;
+	  -webkit-user-modify: read-only;
+}
+
+/* DEBUG PART*/
+table.debugtable { 	border-width: 1 2 2 1 ; border-color:#666666; border-style: solid ; border-collapse: collapse; }
+td.debug_content {	 font-size: 9pt; color:#000000; padding:2 5 2 5;background-color: #F4F4F4 }
+td.debug_title2 { 	font-family: Tahoma; font-size: 9pt; color:white; background-color: #4040af; font-weight:700;padding:2 5 2 5 }
+td.debug_title {	font-family: Tahoma; font-size: 9pt;  background-color: #c0a0ff;padding:2 5 2 5 }
+
+
+.esys-flexgrid{
+	border-radius: 0 !important;
+}
+/* Over ride*/
+.form-control {
+	height:28px !important;
+	    padding-left: 2px !important;
+    padding-right: 2px !important;
+}
+select > option{
+     background: #e9e9e9;
+      border: 1px solid #666666;
+}

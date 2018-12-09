@@ -1,0 +1,1626 @@
+﻿html, body {
+    padding: 0 0 0 0;
+    width: 100%;
+    margin: 0 0 0 0;
+    height: 100%;
+    overflow-y: auto;
+    /*overflow: hidden;*/
+}
+
+table {
+    /*table-layout: fixed;*/
+
+    border:0;
+    width: 100%;
+    background-color: #ffffff;    
+	border-spacing: 0px;
+}
+
+    table td > div {
+        /* overflow: auto; */
+        height: 100%;
+    }
+
+td {
+    vertical-align: middle;
+}
+td.top {
+    vertical-align: top;
+}
+td.mid {
+    vertical-align: middle;
+}
+label {
+    display: block;
+    text-align: right;
+}
+fieldset{
+    margin:0;
+    padding: 1px;
+    box-sizing: border-box;
+    border-width: 1px;
+}
+/* WJ Control */
+.ts-content.ts-dropdown, .ts-content.ts-inputnumber, .ts-content.ts-inputmask, .ts-content.ts-calendar-outer, .ts-content.ts-pager, .ts-content.ts-textbox, {
+    display: inline-table;
+}
+
+.ts-content {
+    /* Primary esys control style - applies to all controls */
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: #fff;
+    outline: none;
+}
+
+.ts-control {
+    outline: none;
+}
+
+
+.ts-header {
+    /* Define control header */
+    background-color: #EAEAEA;
+    color: #444;
+    font-weight: bold;
+}
+
+.ts-state-selected {
+    /* Selected state colors */
+    background-color: #0085c7;
+    color: #fff;
+}
+
+.ts-state-multi-selected {
+    /* Selected state colors */
+    background-color: #80ADBF;
+    color: #fff;
+}
+
+.ts-state-disabled {
+    /* Fade disabled state */
+    opacity: 0.5;
+}
+
+.ts-control[disabled] {
+    /* HTML disabled controls */
+    background-color: #eeeeee;
+    opacity: .5;
+}
+
+/* Button Styles */
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    /* Basic style for all button types */
+    -webkit-appearance: button;
+    overflow: visible;
+    border-radius: inherit;
+    cursor: pointer;
+}
+
+.ts-btn {
+    /* Global base button style */
+    display: block;
+    padding: 3px 10px;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.ts-btn-default {
+    /* Additional styling for a 'default' button */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+}
+
+    .ts-btn-default:hover {
+        /* Hover on 'default' button */
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .ts-btn-default:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+	.ts-btn-icon {
+    font-style: normal;
+    padding-right: 5px;
+}
+/* Button Group Styles */
+
+.ts-btn-group, .ts-btn-group-vertical {
+    /* Define button group based on bootstrap */
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    vertical-align: top;
+}
+
+    .ts-btn-group > .ts-btn, .ts-btn-group-vertical > .ts-btn {
+        /* Float buttons in group */
+        position: relative;
+        float: left;
+    }
+
+        .ts-btn-group > .ts-btn:not(:first-child):not(:last-child) {
+            /* Remove inner button border radius */
+            border-radius: 0;
+        }
+
+        .ts-btn-group > .ts-btn:first-child {
+            margin-left: 0;
+        }
+
+            .ts-btn-group > .ts-btn:first-child:not(:last-child) {
+                /* Remove first button right-side border radius and margin */
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+        .ts-btn-group > .ts-btn:last-child:not(:first-child) {
+            /* Remove last button left-side border radius and margin */
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+    .ts-btn-group .ts-btn + .ts-btn, .ts-btn-group .ts-btn + .ts-btn-group, .ts-btn-group .ts-btn-group + .ts-btn, .ts-btn-group .ts-btn-group + .ts-btn-group {
+        /* Remove margin from inner buttons to prevent double border */
+        margin-left: -1px;
+    }
+
+/* ListBox Styles */
+
+.ts-listbox {
+    overflow: auto;
+}
+
+.ts-listbox-item {
+    padding: 3px 10px;
+}
+
+    .ts-listbox-item:not(.ts-state-selected):not(.ts-separator):hover {
+        background-color: rgba(0,0,0,.05);
+    }
+
+.ts-listbox .ts-listbox-item label {
+    font-weight: normal;
+    margin: 0px;
+}
+
+.ts-dropdown .ts-listbox {
+    padding: 0;
+    white-space: nowrap;
+}
+
+/* Dropdown Styles */
+
+.ts-dropdown {
+    vertical-align: middle;
+}
+
+    .ts-dropdown .ts-template, .ts-dropdown .ts-dropdown-menu {
+        border-radius: inherit;
+    }
+
+.ts-template {
+    height: 100%;
+}
+
+.ts-dropdown-panel {
+    outline: none;
+    box-shadow: 0 6px 13px rgba(0,0,0,0.2);
+    /* Boostrap modals have zIndex 1050, so go higher */
+    z-index: 1500 !important;
+}
+
+
+/* Input Group Styles */
+
+.ts-inputnumber {
+    vertical-align: middle;
+}
+
+input::-ms-clear {
+    /* Eliminate clear icon from IE textbox */
+    display: none;
+}
+
+button, input, optgroup, select, textarea {
+    /* Remove default browser focus outlines */
+    outline: 0;
+}
+
+.ts-input-group-btn, .ts-input-group .ts-form-control {
+    box-sizing: border-box;
+    display: table-cell;
+}
+
+.ts-button-group-btn, .ts-button-group .ts-form-control {
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.ts-input {
+    height: 100%;
+    overflow: hidden;
+}
+
+.ts-button {
+    /*height: 100%;*/
+    overflow: hidden;
+}
+
+.ts-checkbox {
+    /* height: 100%;
+	overflow: hidden; */
+}
+
+.ts-input-group {
+    /* Define input group based on bootstrap */
+    position: relative;
+    display: table;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+    border-radius: 4px;
+    background: inherit;
+}
+.ts-input-group:focus{
+	background:#e6f9e5;
+}
+.ts-input-group:hover{
+	background:#e6f9e5;
+}
+.ts-button-group {
+    /* Define button group based on bootstrap */
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+    border-radius: 4px;
+    background: inherit;
+}
+
+.ts-checkbox-group {
+    /* Define button group based on bootstrap */
+    position: relative;
+    /* display: table; */
+    /* overflow: hidden; */
+    width: 19px;
+    height: 19px;
+    border-collapse: separate;
+    border-radius: 4px;
+    background: inherit;
+}
+
+.ts-input-group .ts-form-control {
+    /* Style for text input box in group */
+    position: relative;
+    float: left;
+    padding: 0px 4px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: inherit;
+}
+
+.ts-checkbox-group .ts-form-control {
+    /* Style for text input box in group */
+    position: relative;
+    /* float: right; */
+    padding: 0px;
+    /* width: 100%; */
+    /* height: 100%; */
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: inherit;
+    margin: 0px;
+}
+
+button.ts-form-control {
+    /*height:25px !important;*/
+}
+
+button > img {
+   width: 16px;
+    margin-bottom: -4px;
+    margin-left: -4px;
+}
+
+.ts-button-group .ts-form-control {
+    /* Style for text input box in group */
+    /*position: relative;
+		//float: left;*/
+    /* padding: 4px 8px; */
+    width: 100%;
+    height: 100%;
+    /*border: none;
+		border-radius: 0;*/
+    background-color: transparent;
+    color: inherit;
+    border-bottom-style: window-inset;
+    border-bottom-width: 0.1px;
+    border-right-width: 0.1px;
+    border-right-style: window-inset;
+}
+
+.ts-input-group .ts-form-control.ts-numeric {
+    /* Text alignment for numeric input types */
+    text-align: right;
+}
+
+.ts-input-group div[ts-part='header'] {
+    /* Adjust float and width for Menu control */
+    float: none;
+    width: auto;
+    vertical-align: middle;
+}
+
+.ts-input-group-btn > .ts-btn {
+    /* Remove border from outside of buttons - outer border set at ts-content level */
+    border-width: 0;
+}
+
+.ts-input-group-btn:first-child > .ts-btn {
+    /* Remove first button right-side border radius */
+    border-right-width: 1px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ts-input-group-btn:last-child > .ts-btn {
+    /* Remove last button left-side border radius */
+    border-left-width: 1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.ts-input-group-btn > .ts-button {
+    /* Remove border from outside of buttons - outer border set at ts-content level */
+    border-width: 0;
+}
+
+.ts-input-group-btn:first-child > .ts-button {
+    /* Remove first button right-side border radius */
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+.ts-input-group-btn:last-child > .ts-button {
+    /* Remove last button left-side border radius */
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+.ts-input-group-btn {
+    /* Style for buttons in group */
+    position: relative;
+    width: 26px;
+    height: 100%;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+/* Pager Styles */
+
+.ts-pager {
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+    .ts-pager .ts-input-group-btn > .ts-btn {
+        min-width: 40px;
+    }
+
+    .ts-pager .ts-btn[disabled] span {
+        opacity: .5;
+        cursor: default;
+    }
+
+    .ts-pager .ts-form-control {
+        text-align: center;
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+/* Calendar Date Input Styles */
+
+.ts-calendar-outer {
+    /* Outer padding for calendar control */
+    display: block;
+    /*padding: 10px;
+	width: 100%;*/
+    height: auto;
+}
+
+.ts-calendar td {
+    text-align: center;
+}
+
+.ts-dropdown-panel .ts-calendar-outer {
+    /* Remove background, border when in dropdown */
+    border: 0;
+    background: none;
+}
+
+/* -- Date selection -- */
+
+.ts-calendar-header {
+    /* Added padding to bottom of date selection options */
+    display: block;
+    padding: 0 0 15px 0;
+    width: 100%;
+}
+
+.ts-month-select {
+    /* Float month selection to the left */
+    display: inline-block;
+    float: left;
+    /* Cursor for month selection */
+    cursor: pointer;
+}
+
+.ts-calendar-header .ts-btn-group {
+    /* Float calendar button group to the right */
+    display: inline-block;
+    float: right;
+    margin-bottom: 7px;
+}
+
+    .ts-calendar-header .ts-btn-group .ts-btn {
+        /* Size button group in calendar header */
+        padding: 0 8px 1px 8px;
+        min-height: 25px;
+    }
+
+/* -- Days of the month -- */
+
+.ts-calendar-month {
+    box-sizing: border-box;
+    width: 100%;
+    border-collapse: collapse;
+    font: inherit;
+}
+
+    .ts-calendar-month td {
+        width: 14.29%;
+        padding: 5px 0;
+        border: none;
+    }
+
+    .ts-calendar-month .ts-header {
+        /* Slightly reduce size of text in calendar header */
+        font-size: 90%;
+    }
+
+/* -- Months of the year -- */
+
+.ts-calendar-year {
+    box-sizing: border-box;
+    width: 100%;
+    border-collapse: collapse;
+    font: inherit;
+}
+
+    .ts-calendar-year td {
+        width: 25%;
+        padding: 8px;
+        border: none;
+    }
+
+/* -- FlexGrid -- */
+
+.ts-flexgrid {
+    width: 100%;
+    overflow: hidden;
+}
+
+.ts-cell {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 3px;
+    border-right: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+    .ts-cell.ts-state-selected .ts-control, .ts-cell.ts-state-multi-selected .ts-control {
+        /* Text color for nested controls in a selected row */
+        color: #444;
+    }
+
+[dir="rtl"] .ts-cell {
+    border-left: 1px solid #c6c6c6;
+    border-right: none;
+}
+
+.ts-cell.ts-wrap {
+    white-space: normal;
+    text-overflow: clip;
+}
+
+.ts-grid-editor {
+    padding: 3px;
+    border: none;
+    width: 100%;
+    margin: 0px;
+}
+
+.ts-cell:not(.ts-header):not(.ts-group):not(.ts-alt):not(.ts-state-selected):not(.ts-state-multi-selected) {
+    /* Default grid cell color */
+    background: #fff;
+}
+
+.ts-alt:not(.ts-header):not(.ts-group):not(.ts-state-selected):not(.ts-state-multi-selected) {
+    /* Alternate grid cell color */
+    background: #f9f9f9;
+}
+
+.ts-frozen-row {
+    border-bottom: 1px solid #666;
+}
+
+.ts-frozen-col {
+    border-right: 1px solid #666;
+}
+
+[dir="rtl"] .ts-frozen-col {
+    border-left: 1px solid #666;
+    border-right: none;
+}
+
+.ts-flexgrid .ts-group {
+    background-color: #dddddd;
+}
+
+.ts-flexgrid .ts-marker {
+    position: absolute;
+    background-color: #0085c7;
+    opacity: 0.5;
+}
+
+/* remove spinner buttons from InputNumber control */
+.ts-inputnumber input[type=number]::-webkit-inner-spin-button,
+.ts-inputnumber input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* FlexGrid Filter extension */
+
+.ts-columnfiltereditor {
+    padding: 10px;
+    min-width: 230px;
+}
+
+    .ts-columnfiltereditor .ts-control {
+        margin-bottom: 6px;
+        width: 100%;
+    }
+
+    .ts-columnfiltereditor a[ts-part^="btn-"] {
+        background: #e6e6e6;
+        padding: 6px 20px;
+        color: #444;
+        display: inline-block;
+        margin-top: 5px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+        .ts-columnfiltereditor a[ts-part^="btn-"]:hover {
+            text-decoration: none;
+            background: #e0e0e0;
+        }
+
+/* FlexGrid GroupPanel extension */
+.ts-grouppanel {
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+    .ts-grouppanel .ts-cell {
+        margin-right: 10px;
+        padding: 6px 16px;
+        border: 1px solid #e6e6e6;
+        cursor: pointer;
+    }
+
+        .ts-grouppanel .ts-cell:hover {
+            background: #e0e0e0;
+        }
+
+/* WJ Tooltip */
+
+.ts-tooltip {
+    position: absolute;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    max-width: 400px;
+    padding: 6px;
+    background-color: #ffffe5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+/* Chart Styles */
+
+.ts-flexchart {
+    height: 400px;
+    padding: 15px 10px;
+    margin-bottom: 12px;
+    background-color: white;
+    border: 1px solid #e4e4e4;
+}
+
+    .ts-flexchart .ts-title {
+    }
+
+    .ts-flexchart .ts-header {
+    }
+
+        .ts-flexchart .ts-header .ts-title {
+            font-size: 16pt;
+            fill: #666;
+            font-weight: normal;
+        }
+
+    .ts-flexchart .ts-footer {
+    }
+
+        .ts-flexchart .ts-footer .ts-title {
+            fill: #666;
+            font-weight: normal;
+        }
+
+    .ts-flexchart .ts-plot-area {
+    }
+
+    .ts-flexchart .ts-legend .ts-label {
+        fill: #666;
+    }
+
+    .ts-flexchart .ts-data-label {
+        fill: #666;
+    }
+
+    .ts-flexchart .ts-data-label-border {
+        stroke: rgba(128, 128, 128, 0.5);
+    }
+
+    .ts-flexchart .ts-axis-x .ts-title,
+    .ts-flexchart .ts-axis-y .ts-title {
+        font-style: italic;
+    }
+
+    /* style for selected items on the chart */
+    .ts-flexchart .ts-state-selected {
+        stroke-width: 3px;
+        stroke-dasharray: 6;
+        stroke-linecap: square;
+    }
+
+/* style for selected items on the chart - smaller screens */
+@media(max-width: 1025px) {
+    .ts-flexchart .ts-state-selected {
+        stroke-width: 2px;
+        stroke-dasharray: 4;
+    }
+}
+
+@media(max-width: 767px) {
+    ts-flexchart .ts-state-selected {
+        stroke-width: 1px;
+        stroke-dasharray: 3;
+    }
+}
+
+/* X Axis  */
+
+.ts-flexchart .ts-axis-x {
+}
+
+    .ts-flexchart .ts-axis-x .ts-label {
+        fill: #666;
+    }
+
+    /* bottom line */
+    .ts-flexchart .ts-axis-x .ts-line {
+        stroke: #aaa;
+        stroke-width: 1;
+    }
+
+    /* bottom tick */
+    .ts-flexchart .ts-axis-x .ts-tick {
+        stroke: #aaa;
+        stroke-width: 1;
+    }
+
+    /* none */
+    .ts-flexchart .ts-axis-x .ts-gridline {
+        stroke: black;
+        stroke-width: 0.25pt;
+    }
+
+    /* minor tick */
+    .ts-flexchart .ts-axis-x .ts-tick-minor {
+        stroke: #aaa;
+        stroke-width: 1;
+    }
+
+    /* minor grid line */
+    .ts-flexchart .ts-axis-x .ts-gridline-minor {
+        stroke: black;
+        stroke-dasharray: 6;
+        stroke-width: 0.25pt;
+    }
+
+/* Y Axis */
+
+.ts-flexchart .ts-axis-y {
+}
+
+    /* labels down y axis */
+    .ts-flexchart .ts-axis-y .ts-label {
+        fill: #666;
+    }
+
+    .ts-flexchart .ts-axis-y .ts-tick {
+        stroke: #aaa;
+        stroke-width: 1;
+    }
+
+    /* bg horiz lines */
+    .ts-flexchart .ts-axis-y .ts-gridline {
+        stroke: #777;
+        stroke-width: 0.25pt;
+    }
+
+    /* minor tick */
+    .ts-flexchart .ts-axis-y .ts-tick-minor {
+        stroke: #aaa;
+        stroke-width: 1;
+    }
+
+    /* minor grid line */
+    .ts-flexchart .ts-axis-y .ts-gridline-minor {
+        stroke: black;
+        stroke-dasharray: 6;
+        stroke-width: 0.25pt;
+    }
+
+/* range selector */
+.ts-flexchart .ts-rangeselector {
+    visibility: hidden;
+    position: relative;
+}
+
+    .ts-flexchart .ts-rangeselector .ts-scroller {
+        border: 2px solid Gray;
+        position: absolute;
+        display: block;
+        background-color: whitesmoke;
+        opacity: 0.6;
+        border-radius: 0.5em;
+        touch-action: none;
+    }
+
+    .ts-flexchart .ts-rangeselector .ts-hscroller {
+        width: 20px;
+    }
+
+    .ts-flexchart .ts-rangeselector .ts-vscroller {
+        height: 20px;
+    }
+
+    .ts-flexchart .ts-rangeselector .ts-scroller-center {
+        background: rgba(128, 128, 128, 0.1);
+        position: absolute;
+        display: block;
+        touch-action: none;
+    }
+
+/* chart marker */
+
+.ts-flexchart .ts-chart-linemarker {
+    background: rgba(128, 128, 128, 0.3);
+    position: absolute;
+    padding: 2px;
+}
+
+.ts-flexchart .ts-chart-linemarker-container {
+    position: relative;
+}
+
+.ts-flexchart .ts-chart-linemarker .ts-chart-linemarker-hline {
+    height: 2px;
+    background: rgba(128, 128, 128, 1);
+    touch-action: none;
+    position: absolute;
+}
+
+.ts-flexchart .ts-chart-linemarker .ts-chart-linemarker-vline {
+    width: 2px;
+    background: rgba(128, 128, 128, 1);
+    touch-action: none;
+    position: absolute;
+}
+
+.ts-flexchart.ts-chart-linemarker-draggable,
+.ts-flexchart .ts-chart-linemarker .ts-chart-linemarker-draggable {
+    -moz-user-select: none;
+    -khtml-user-drag: element;
+    cursor: move;
+}
+
+/* Gauges */
+
+.ts-gauge {
+    overflow: hidden;
+}
+
+    .ts-gauge:focus {
+        outline: none;
+    }
+
+    .ts-gauge .ts-face path {
+        fill: #f5f5f5;
+        stroke: #cbcbcb;
+        stroke-width: 1;
+        stroke-linejoin: round;
+    }
+
+    .ts-gauge .ts-pointer {
+        fill: #0085c7;
+    }
+
+    .ts-gauge .ts-min, .ts-max {
+        font-size: 60%;
+        opacity: .5;
+    }
+
+.ts-radialgauge .ts-value {
+    font-size: 150%;
+}
+
+.ts-lineargauge {
+    height: 1.2em;
+}
+
+/* ColorPicker */
+
+.ts-colorpicker {
+    width: 420px;
+    height: 200px;
+    padding: 4px;
+}
+
+.ts-colorbox {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* TreeView*/
+
+/*.ts-treeview-path {
+    height: 1em;
+}*/
+
+.ts-treenode {
+    display: block;
+}
+
+    .ts-treenode .ts-treenode {
+        margin-left: 2em;
+    }
+
+.ts-treenode-label {
+    cursor: pointer;
+    margin: 0.5em;
+}
+
+/* CheckBox */
+/*.ts-checkbox {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1em;
+     
+    cursor: pointer;
+}*/
+.ts-checkbox {
+    display: inline-block;
+    margin: 0px 2px;
+    height: 21px;
+    width: 20px;
+    position: relative;
+    z-index: 0;
+}
+    .ts-checkbox input {
+        opacity: 0;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin: 0 !important;
+        padding: 0;
+        z-index: 2;
+        cursor: pointer;
+    }
+        .ts-checkbox i {
+            display: inline-block;
+            height: 20px;
+            width: 18px;
+            cursor: pointer;
+            vertical-align: middle;
+            /* border: 2px solid #CCCCCC; */
+            /* border-radius: 3px; */
+            text-align: center;
+            padding-top: 1px;
+            font-family: 'FontAwesome';
+            z-index: 1;
+            font-size: 18px;
+            position: absolute;
+            /* top: -1px; */
+            left: -1px;
+            color: #000000;
+        }
+        .ts-checkbox input:checked + i {
+            border-color: #CCCCCC;
+            color: #000000;
+            background: #ffffff;
+        }
+        .ts-checkbox input[type=checkbox]:checked + i:before {
+            content: "\f00c";
+        }
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0,0);
+}
+/* Panel */
+.ts-panel {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1em;
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+}
+
+/* Glyphs */
+
+.ts-glyph-up {
+    display: inline-block;
+    border-right: .4em solid transparent;
+    border-bottom: .5em solid;
+    border-left: .4em solid transparent;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-down {
+    display: inline-block;
+    border-top: .5em solid;
+    border-right: .4em solid transparent;
+    border-left: .4em solid transparent;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-left {
+    display: inline-block;
+    border-top: .4em solid transparent;
+    border-right: .5em solid;
+    border-bottom: .4em solid transparent;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-right {
+    display: inline-block;
+    border-top: .4em solid transparent;
+    border-bottom: .4em solid transparent;
+    border-left: .5em solid;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-down-left {
+    display: inline-block;
+    border-top: .65em solid transparent;
+    border-left: .65em solid;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-down-right {
+    display: inline-block;
+    border-bottom: .65em solid;
+    border-left: .65em solid transparent;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-up-left {
+    display: inline-block;
+    border-bottom: .65em solid transparent;
+    border-left: .65em solid;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-up-right {
+    display: inline-block;
+    border-top: .65em solid;
+    border-left: .65em solid transparent;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-circle {
+    display: inline-block;
+    border: .25em solid;
+    border-radius: 1em;
+    transform: translateY(-.1em);
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-square {
+    display: inline-block;
+    border: .25em solid;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-diamond {
+    display: inline-block;
+    border: .25em solid;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-check {
+    position: relative;
+    display: inline-block;
+    width: .75em;
+    height: .75em;
+    border-right: .3em solid;
+    border-bottom: .22em solid;
+    transform: rotate(35deg) scaleX(.5);
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ts-glyph-filter {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    top: -.1em;
+    width: .5em;
+    border-top: .5em solid;
+    border-right: .4em solid transparent;
+    border-left: .4em solid transparent;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+    .ts-glyph-filter:after {
+        position: absolute;
+        box-sizing: border-box;
+        border: .12em solid;
+        width: .12em;
+        height: .4em;
+        transform: translateX(-50%);
+        top: -.2em;
+        content: "";
+    }
+
+[dir="rtl"] .ts-glyph-filter:after {
+    transform: translateX(50%);
+}
+
+
+
+/*APP SETTING*/
+
+general {
+    background-color: white !important;
+    color: #000000 !important;
+}
+
+.filter {
+    background-color: #EBEBEB !important;
+    color: #000000 !important;
+}
+
+.mandatory {
+    background-color: #FFFAAF !important;
+    color: #000000 !important;
+}
+
+
+
+/********************************ICON****************/
+
+.ts-icon-group {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 26px;
+    height: 21px;
+    border-collapse: separate;
+    border-radius: 4px;
+    background: #DDDDDD;
+}
+
+
+
+.gw-icon {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: default;
+    color: #3b5998 !important;
+}
+
+    .gw-icon button:disabled > span {
+        color: #bbb;
+    }
+
+    .gw-icon button {
+        /*padding-left: 20px;*/
+        /*padding-top: 7px;*/
+        margin: 0 0 0 0;
+        border: none;
+        width: 100%;
+        height: 100%
+        /*padding-bottom: 4px;
+    padding-right: 6px;*/
+    }
+
+
+        /*.gw-icon button:before {
+    font-size: 16px;
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.gw-icon button:after {
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    pointer-events: none;
+}*/
+
+
+
+        .gw-icon button:hover {
+            cursor: pointer;
+            color: #009fe3 !important;
+        }
+
+        .gw-icon button:active {
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            color: #3b5998;
+        }
+
+
+.ts-label-group {
+    white-space: nowrap;
+    border: none;
+    padding-top: 3px;
+}
+
+
+
+/**********************POPUP***************/
+
+.ts-popup {
+    background-color: #fff;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    z-index: 1500;
+    margin: 2px 0;
+}
+
+.ts-popup-backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1500;
+    background-color: rgba(0,0,0,.5);
+}
+
+.modal-header {
+    min-height: 16.43px;
+    height: 1%;
+    padding: 5px;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0px
+}
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+.modal-body {
+    position: relative;
+    padding: 5px;
+    height: 98%;
+}
+
+.modal-footer {
+    height: 1%;
+    padding: 5px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+/**ESYS GRID STATUS*/
+.ts-grid-row_status-deleted {
+    background-color: #EEEEEE !important;
+    color: #808080 !important;
+}
+
+.ts-grid-row_status-edited {
+    background-color: #EEEEEE !important;
+    color: #808080 !important;
+}
+
+.ts-grid-row_status-added {
+    background-color: #EEEEEE !important;
+    color: #808080 !important;
+}
+/**ESYS GRID STATUS*/
+
+/*.input-month > div {
+    position: absolute;
+    z-index: 1222222222222;
+    width: 89%;
+}
+.input-month > div > div {
+    
+    z-index: 1222222222222;
+    width: 89%;
+}*/
+
+.date-box {
+    width: 160px !important;
+    height: 21px !important;
+}
+
+.year-box {
+    width: 122px !important;
+    height: 21px !important;
+}
+
+.month-box {
+    width: 140px !important;
+    height: 21px !important;
+}
+
+.input-month {
+    display: inline-table;
+    width: 120px !important;
+    height: 21px !important;
+}
+
+    .input-month > div > div > div > input {
+        width: 85px !important;
+        padding: 2px 8px !important;
+    }
+
+.ts-list {
+    height: 21px;
+}
+
+    .ts-list > div > div > select {
+        padding: 0px 0px !important;
+    }
+
+.ts-content .ts-dropdown-panel .ts-control .ts-calendar {
+    width: 150px !important;
+}
+
+.ts-textbox {
+    height: 21px !important;
+}
+
+.input-time {
+    position: relative;
+    height: 21px;
+    width: 90px;
+}
+
+
+
+
+/*css style for IE*/
+select[disabled='disabled']::-ms-value {
+    background-color: #eeeeee;
+    opacity: .5
+}
+/*Specific to chrome and firefox*/
+select[disabled='disabled'] {
+    background-color: #eeeeee;
+    opacity: .5
+}
+
+/**UPLOAD INLINE*/
+.plftoggleFilelist {
+    height: 100%;
+    margin: 0 0 0 0;
+}
+
+ul.plftoggleFilelist > li {
+    text-align: left;
+}
+
+.ts-flexgrid {
+    border-radius: 0 !important;
+}
+
+.wj-treeview {
+    width: 100%;
+    overflow: auto;
+    background: transparent;
+    border: none
+}
+
+    .wj-treeview *:focus {
+        outline: none
+    }
+
+    .wj-treeview.wj-state-loading * {
+        cursor: wait !important
+    }
+
+    .wj-treeview .wj-node {
+        cursor: pointer;
+        white-space: nowrap;
+        box-sizing: border-box;
+        padding: 3px 10px
+    }
+
+        .wj-treeview .wj-node.wj-state-selected {
+            color: inherit;
+            background: rgba(0,0,0,.05)
+        }
+
+        .wj-treeview .wj-node img {
+            padding-right: 4px
+        }
+
+        .wj-treeview .wj-node .wj-node-check {
+            margin-right: 4px
+        }
+
+        .wj-treeview .wj-node:before {
+            content: "";
+            position: relative;
+            display: inline-block;
+            border-top: .5em solid;
+            border-right: .45em solid transparent;
+            border-left: .45em solid transparent;
+            top: -1px;
+            margin-right: 4px;
+            opacity: .75;
+            transition: all .3s cubic-bezier(.4,0,.2,1)
+        }
+
+        .wj-treeview .wj-node.wj-state-collapsed:before, .wj-treeview .wj-node.wj-state-collapsing:before {
+            transform: rotate(-90deg);
+            transition: all .3s cubic-bezier(.4,0,.2,1)
+        }
+
+    .wj-treeview .wj-nodelist .wj-node.wj-state-empty:before {
+        visibility: hidden
+    }
+
+    .wj-treeview .wj-nodelist {
+        display: block;
+        position: relative
+    }
+
+        .wj-treeview .wj-nodelist .wj-nodelist {
+            padding-left: 1em
+        }
+
+    .wj-treeview .wj-node.wj-state-collapsed + .wj-nodelist {
+        display: none
+    }
+
+    .wj-treeview .wj-marker {
+        position: absolute;
+        background-color: #0085c7;
+        opacity: .5;
+        pointer-events: none
+    }
+
+    .wj-treeview .wj-node.wj-state-collapsed.wj-state-loading:before {
+        animation-name: wjLazyNodeLoading;
+        animation-duration: .6s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite
+    }
+
+@keyframes wjLazyNodeLoading {
+    from {
+        opacity: 1;
+        transform: scale(1.1)
+    }
+
+    to {
+        opacity: .5;
+        transform: scale(.5)
+    }
+}
+
+[dir="rtl"] .wj-treeview .wj-nodelist .wj-nodelist {
+    padding-left: unset;
+    padding-right: 1em
+}
+
+[dir="rtl"] .wj-treeview .wj-node img {
+    padding-right: unset;
+    padding-left: 4px
+}
+
+[dir="rtl"] .wj-treeview .wj-node .wj-node-check {
+    margin-right: unset;
+    margin-left: 4px
+}
+
+[dir="rtl"] .wj-treeview .wj-nodelist .wj-node:before {
+    margin-right: unset;
+    margin-left: 4px
+}
+
+[dir="rtl"] .wj-treeview .wj-nodelist .wj-node.wj-state-collapsed:before, [dir="rtl"] .wj-treeview .wj-nodelist .wj-node.wj-state-collapsing:before {
+    transform: rotate(+90deg)
+}
+
+
+/*TS - TAB FORM*/
+.ts-tab {
+}
+
+.ts-tab-header {
+    width: inherit;
+    height: 22px;
+    cursor: pointer;
+    display: table-cell;
+}
+
+.ts-tab-header-sel {
+    /*width:100%;*/
+    height: 100%;
+    cursor: pointer;
+}
+
+.ts-tab-header-left {
+    width: 5px;
+    height:21px;
+    cursor: pointer;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    font-weight: bold;
+    /*padding-top: 3px;*/
+    color: #888888;
+    background-image: url(../images/tab/tab_bgl.gif);
+}
+
+.ts-tab-header-left-over {
+    background-image: url(../images/tab/tab_bgl_over.gif) !important;
+	height:21px;
+}
+
+.ts-tab-header-left-sel {
+    background-image: url(../images/tab/tab_bgl_sel.gif) !important;
+	height:21px;
+}
+
+.ts-tab-header-middle {
+    /*width:5px;*/
+    height:21px;
+    cursor: pointer;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    font-weight: bold;
+    /*padding-top: 3px;*/
+    color: #888888;
+    background-image: url(../images/tab/tab_bgm.gif);
+    white-space: nowrap;
+}
+
+.ts-tab-header-middle-over {
+    background-image: url(../images/tab/tab_bgm_over.gif) !important;
+	height:21px;
+}
+
+.ts-tab-header-middle-sel {
+    background-image: url(../images/tab/tab_bgm_sel.gif) !important;
+	height:21px;
+}
+
+.ts-tab-header-right {
+    width: 15px;
+    height:21px;
+    cursor: pointer;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    font-weight: bold;
+    /*padding-top: 3px;*/
+    color: #888888;
+    background-image: url(../images/tab/tab_bgr.gif);
+}
+
+.ts-tab-header-right-over {
+    background-image: url(../images/tab/tab_bgr_over.gif) !important;
+	height:21px;
+}
+
+.ts-tab-header-right-sel {
+    background-image: url(../images/tab/tab_bgr_sel.gif) !important;
+	height:21px;
+}
+
+.ts-tab-content-show {
+    /* display:inherit; */
+}
+
+.ts-tab-content-hide {
+    display: none !important;
+}
+
+
+
+

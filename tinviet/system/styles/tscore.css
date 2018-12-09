@@ -1,0 +1,40 @@
+﻿input, div, label {
+    font-family: Arial, Sans-Serif !important;
+	font-size: 12px !important;
+}
+
+.wj-content, .wj-cell{
+	border-color: #84d7f2 !important;
+}
+
+.wj-header {
+	background-color: #ffffff !important;
+	color : #427693 !important;
+	border-bottom-style: solid !important;
+}
+
+.wj-cell{
+	border-bottom-style: dotted;
+}
+
+.wj-state-multi-selected {
+	background-color: #c4e9fb !important;
+	color : #000000 !important; 
+}
+
+.wj-state-selected{
+	background-color: #00bcd4 !important;
+	color : #000000 !important; 
+}
+
+.ts-input-group:hover{
+	background-color: transparent;
+}
+
+.ts-icon-group {
+	background-color: transparent;
+}
+
+.wj-state-focused{
+	border-color: #84d7f2 !important;
+}

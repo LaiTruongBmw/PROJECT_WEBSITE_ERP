@@ -1,0 +1,185 @@
+﻿<img id="imgDebug" src="${pageContext.request.contextPath}/system/images/main/debug.gif" style="cursor: hand; position: absolute; left: 2; top: 2; z-index: 111111111;" align="right" onclick="openDebug();" />
+<div id="loadingBar" style="z-index: 111111; position: fixed; left: 50%; display: none;">
+    <img id="loadingbarImg" src="${pageContext.request.contextPath}/system/images/main/loading/loadingbar.gif" />
+</div>
+<div id="debuger"
+     style="width: 100%; height: 130px; background: gray; display: none;  ">
+    <!-- oncontextmenu="return false;" -->
+    <table id="idDebugTable" style="width: 100%; height: 100%; background-color: inherit;font-size: 8pt;">
+        <tr>
+            <td style="background-color: blue; color: white; text-align: center;"
+                width="50%">
+                <table>
+                    <tr>
+                        <td width="100%" style="background-color: blue; color: white"
+                            align="center">
+                            <b>Result Window </b>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="button" onclick="GoTutorial();" value="Tutorial" />
+                                    </td>
+                                    <td>
+                                        <input type="button" onclick="OpenSDE();" value="SDE" />
+                                    </td>
+                                    <td>
+                                        <input type="button" onclick="Size(-100);" value="SizeUp" />
+                                    </td>
+                                    <td>
+                                        <input type="button" onclick="Size(+100);" value="SizeDown" />
+                                    </td>
+                                    <td>
+                                        <input type="button" onclick="gotoPage(-1);" value="Go Back Page" />
+                                    </td>
+                                    <td>
+                                        <input type="button" onclick="gotoPage(1);" value="Go Next Page" />
+                                    </td>
+                                    <td>
+                                        <input type="button" onclick="ViewSource();" value="Source" />
+                                    </td>
+                                    <td>
+                                        <input type="button" onclick="openDebug();" value="Close" />
+                                    </td>
+                                    <td>
+                                        <input type="button" onclick="clearDebugHistory();" value="Clear" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="background-color: blue; color: white" width="50%"
+                align="center">
+                <table>
+                    <tr>
+                        <td width="100%" style="background-color: blue; color: white"
+                            align="center">
+                            <b>Debug Window </b>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="button" onclick="DebugLog();" value="Start Logging" />
+                                    </td>
+                                    <td>
+                                        <input type="button" onclick="DeleteLog()" value="Delete Logging" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" height="100%">
+                <div id="lastLog" style="width: 100%; height: 100%; border: 1 solid blue;user-select: initial;
+    -moz-user-select: initial;
+    -webkit-user-select: initial;
+    -ms-user-select: text;
+    user-select: initial;
+    -o-user-select: initial;">
+                </div>
+            </td>
+            <td style="background-color: white" width="50%">
+                <iframe id="debugLog" style="width: 100%; height: 100%; border: 1 solid blue; border: 0;user-select: initial;
+    -moz-user-select: initial;
+    -webkit-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+    -o-user-select: initial;"></iframe>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript">
+
+	var logger;
+	var lastLog;
+
+	/*
+		var width = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+	*/
+		function getHeight(){
+			var height = window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+			return height;
+		}
+		function openDebug(){
+			var h = getHeight-45+17;
+			if(document.getElementById('debuger').style.display=='none')
+				{
+					document.getElementById('debuger').style.display='';
+					h = h - 130 +17;
+					//logger =  document.getElementById("debugLog").contentWindow;
+					//logger.document.write ( '<LINK href="default.css" rel="stylesheet" />' );
+				}
+				else
+				{
+					document.getElementById('debuger').style.display='none';
+					//logger = null;
+				}
+
+			//$('#menuExpander').jqxExpander({ height: h });
+		}
+
+		function Size( delta )
+		{
+			var obj = document.getElementById( "debuger" ).style;
+			delta = obj.height.replace('px','') * 1 + delta;
+			if ( delta  > 20 )
+				{
+				obj.height = delta + 'px';
+				//var h = $( window ).height()-45;
+				//h = h - delta;
+				//$('#menuExpander').jqxExpander({ height: h });
+				}
+		}
+
+		var urlList = new Array();
+	    urlList[top.urlList.length] = '<span>Welcome you to last log tool</span>';
+	    var pos = 1;
+
+	    function clearDebugHistory(){
+	    	urlList = new Array();
+		    urlList[top.urlList.length] = ' ';
+		    pos = 1;
+		    document.getElementById('lastLog').innerHTML='<span><span>';
+	    }
+
+	    function gotoPage(intGo){
+	   		if(intGo==-1)
+	   		{
+	   			if(pos > 0)
+	   			{
+	   				 pos--;
+	   				 document.getElementById('lastLog').innerHTML =  urlList[pos];;
+	   			}
+	   			else
+	   				alert('You can not back page more!');
+	   		}
+	   		else
+	   			{
+	    			if(pos < (urlList.length-1))
+	    			{
+	    				 pos++;
+	    				 document.getElementById('lastLog').innerHTML =  urlList[pos];;
+	    			}
+	    			else
+	    				alert('You can not next page more!');
+	   			}
+
+	    	return false;
+	    }
+
+
+</script>

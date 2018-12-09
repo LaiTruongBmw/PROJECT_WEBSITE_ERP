@@ -1,0 +1,205 @@
+/* For Calendar */
+.smcalendar  		{background-color:#B3E7FF; border: 1 solid #FFFFFF;} 
+.smcalendar_table  	{border-top: 1 solid #B3E7FF; border-left: 1 solid #B3E7FF;} 
+.smcalendar_header 	{background-color:#EFEFEF ; font-family: "Tahoma" ;font-weight:bold; font-size:8pt; color: #01226F; text-align: center; border-top:1 solid white ; border-left:1 solid white ; border-bottom: 1 solid #B3E7FF; border-right: 1 solid #B3E7FF}
+.smcalendar_content  	{font-family: "Tahoma";color:#322E8C; text-align: center; background-color:#EFEFEF; font-size:8pt ; border-top:1 solid white ; border-left:1 solid white ; border-bottom: 1 solid #B3E7FF; border-right: 1 solid #B3E7FF;cursor:hand}
+.smcalendar_last  	{font-family: "Tahoma";color:#7E7E7E; text-align: center; background-color:#EFEFEF; font-size:8pt ; border-top:1 solid white ; border-left:1 solid white ; border-bottom: 1 solid #B3E7FF; border-right: 1 solid #B3E7FF; cursor:hand}
+.smcalendar_select  	{font-family: "Tahoma";color:#700035; text-weight:bold;text-align: center; background-color:#FEF68B; font-size:8pt ; border-bottom: 1 solid #B3E7FF; border-right: 1 solid #B3E7FF; cursor:hand}
+
+/* for Main.aspx */
+/* .tab { 
+	background-image:url(../images/main/tab/tab_bground.png);
+	color: #434444; font-size:11px; 
+	cursor:hand;
+	height:24;
+	width:150;
+	padding-top:4px; 
+	text-align:center; 
+	cursor:pointer;
+}
+*/
+table.tab { 
+	color: #434444; font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:auto;
+	text-align:center; 
+	cursor:pointer;
+	display: table-cell;
+	margin-top: -20px;
+	padding-right:2px;
+} 
+
+table.tab  td.left{ 
+	background-image:url(../images/main/tab/tab_bground-l.gif);
+	background-size: 8px 28px;
+	background-repeat: repeat-x;
+	color: #434444; font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:6px; 
+	text-align:center; 
+	cursor:pointer;
+	margin-top: -20px;
+}
+table.tab  td.middile{ 
+	background-image:url(../images/main/tab/tab_bground-m.gif);
+	background-size: 1px 28px;
+	background-repeat: repeat-x;
+	color: #434444; font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:auto;
+	text-align:center; 
+	white-space: nowrap;
+	cursor:pointer;
+	margin-top: -20px;
+}
+table.tab  td.right{ 
+	background-image:url(../images/main/tab/tab_bground-r.gif);
+	background-size: 8px 28px;
+	background-repeat: repeat-x;
+	color: #434444; font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:6px; 
+	text-align:center; 
+	cursor:pointer;
+	margin-top: -20px;
+}
+
+/* span.activeTab::BEFORE {
+    color: red;
+    width:15px;
+    background-image:url(../images/main/tab/tab_bground.png);color: #434444; font-size:11px; cursor:hand;height:24;width:150;padding-top:4px; text-align:center; cursor:pointer;
+
+}
+
+
+span.activeTab::after {
+    color: red;
+    width:5px;
+    background-image:url(../images/main/tab/tab_bground.png);color: #434444; font-size:11px; cursor:hand;height:24;width:150;padding-top:4px; text-align:center; cursor:pointer;
+
+}
+.activeTab { 
+    background-image: url(../images/main/tab/tab_bground_select.png);
+    color: #434444;
+    font-size: 11px;
+    cursor: pointer;
+    height: 28px;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    text-align: center;
+    padding-right:2px;
+} */
+
+
+table.activeTab { 
+      /* background-image: url(../images/main/tab/tab_bground_select.png); */
+    color: #434444;
+    font-size: 11px;
+    cursor: pointer;
+    height: 28px;
+    width:auto;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -20px;
+    display: table-cell;
+}
+table.activeTab  td.left { 
+    background-image: url(../images/main/tab/tab_bground_sel_l.gif);
+    background-size: 8px 28px;
+    background-repeat: repeat-x;
+    color: #434444;
+    font-size: 11px;
+    cursor: pointer;
+    height: 28px;
+    width: 6px;
+    /* padding-top: 5px; */
+    /* padding-bottom: 20px; */
+    text-align: center;
+    
+    margin-top: -20px;
+}
+table.activeTab  td.middile { 
+    background-image: url(../images/main/tab/tab_bground_sel_m.gif);
+    background-size: 1px 28px;
+    background-repeat: repeat-x;
+    color: #434444;
+    font-size: 12px;
+    cursor: pointer;
+    height: 28px;
+    white-space: nowrap;
+    /* width:100%; */
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -20px;
+}
+
+table.activeTab  td.right { 
+    background-image: url(../images/main/tab/tab_bground_sel_r.gif);
+    background-size: 8px 28px;
+    background-repeat: repeat-x;
+    color: #434444;
+    font-size: 11px;
+    cursor: pointer;
+    height: 28px;
+    width: 6px;
+    /* padding-top: 5px; */
+    /* padding-bottom: 20px; */
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -20px;
+}
+
+
+table.overTab { 
+	color: #434444;
+	font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:auto;
+	text-align:center;
+	margin-top: -20px;
+    display: table-cell;
+    padding-right:2px;
+}
+
+table.overTab td.left  { 
+	background-image:url(../images/main/tab/tab_bground_over-l.gif);
+	background-size: 8px 28px;
+	background-repeat: repeat-x;
+	color: #434444;
+	font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:6px;
+	text-align:center;
+}
+table.overTab td.middile  { 
+	background-image:url(../images/main/tab/tab_bground_over-m.gif);
+	background-size: 1px 28px;
+	background-repeat: repeat-x;
+	color: #434444;
+	font-size:11px; 
+	cursor:hand;
+	height:28px;
+	white-space: nowrap;
+	width:auto;
+	text-align:center;
+} 
+table.overTab td.right  { 
+	background-image:url(../images/main/tab/tab_bground_over-r.gif);
+	background-size: 8px 28px;
+	background-repeat: repeat-x;
+	color: #434444;
+	font-size:11px; 
+	cursor:hand;
+	height:28px;
+	width:6px;
+	text-align:center;
+} 
+
+

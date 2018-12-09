@@ -1,0 +1,38 @@
+
+.esys-input-group{
+/* 	display:inline-block; */
+}
+.input-month{
+	width: 125px !important;
+	height: 26px !important;
+}
+.input-month > div > div > div> input{
+	padding: 0px  !important;
+	
+}
+
+
+div.esys-content .esys-dropdown-panel .esys-control .esys-calendar{
+	width: 150px !important;
+}
+.esys-textbox{
+	height: 26px !important;
+}
+.input-time{
+	position: relative;
+	height: 26px;
+	width: 90px;
+}
+
+
+
+/*css style for IE*/
+ select[disabled='disabled']::-ms-value {
+     background-color:#eeeeee;
+    opacity:.5
+ }
+ /*Specific to chrome and firefox*/
+ select[disabled='disabled'] {
+     background-color:#eeeeee;
+    opacity:.5
+ }

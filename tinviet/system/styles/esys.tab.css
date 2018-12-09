@@ -1,0 +1,82 @@
+.esys-tab {
+    
+}
+
+.esys-tab-header {
+    width:inherit;
+    height:22px;
+    cursor:pointer;
+    display: table-cell;
+}
+
+.esys-tab-header-sel {
+    /*width:100%;*/
+    height:100%;
+    cursor:pointer;
+}
+
+.esys-tab-header-left {
+    width:5px;
+    /*height:100%;*/
+    cursor:pointer;
+    padding:0 0 0 0 ;
+    margin:0 0 0 0;
+    font-weight:bold;
+    /*padding-top: 3px;*/
+    color:#888888;
+    background-image:url(../images/tab/tab_bgl.gif);
+}
+.esys-tab-header-left-over {
+    background-image:url(../images/tab/tab_bgl_over.gif) !important;
+}
+.esys-tab-header-left-sel {
+    background-image:url(../images/tab/tab_bgl_sel.gif) !important;
+}
+
+.esys-tab-header-middle {
+    /*width:5px;*/
+    /*height:100%;*/
+    cursor:pointer;
+    padding:0 0 0 0 ;
+    margin:0 0 0 0;
+    font-weight:bold;
+    /*padding-top: 3px;*/
+    color:#888888;
+    background-image:url(../images/tab/tab_bgm.gif);
+    white-space:nowrap;
+}
+
+.esys-tab-header-middle-over {
+        background-image:url(../images/tab/tab_bgm_over.gif) !important;
+
+}
+
+.esys-tab-header-middle-sel {
+    background-image:url(../images/tab/tab_bgm_sel.gif) !important;
+}
+
+.esys-tab-header-right {
+    width:15px;
+    /*height:100%;*/
+    cursor:pointer;
+    padding:0 0 0 0 ;
+    margin:0 0 0 0;
+    font-weight:bold;
+    /*padding-top: 3px;*/
+    color:#888888;
+    background-image:url(../images/tab/tab_bgr.gif);
+}
+.esys-tab-header-right-over {
+    background-image:url(../images/tab/tab_bgr_over.gif) !important;
+}
+.esys-tab-header-right-sel {
+    background-image:url(../images/tab/tab_bgr_sel.gif) !important;
+}
+
+.esys-tab-content-show {
+    /* display:inherit; */
+}
+
+.esys-tab-content-hide {
+    display:none !important;
+}

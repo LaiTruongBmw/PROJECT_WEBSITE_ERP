@@ -1,0 +1,107 @@
+﻿.add:before {
+    content: "\271A";
+}
+
+.edit:before {
+    content: "\270E";
+}
+
+.delete:before {
+    content: "\2718";
+}
+
+.save:before {
+    content: "\2714";
+}
+
+.email:before {
+    content: "\2709";
+}
+
+.like:before {
+    content: "\2764";
+}
+
+.next:before {
+    content: "\279C";
+}
+
+.star:before {
+    content: "\2605";
+}
+
+.spark:before {
+    content: "\2737";
+}
+
+.play:before {
+    content: "\25B6";
+}
+
+/* 
+	
+Button Facebook & Twitter */
+
+.tw, .fb, .gl, .tw:hover, .fb:hover, .gl:hover {
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.5)),to(rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));
+    background-image: linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));
+}
+
+    .tw, .tw:focus {
+        background-color: #88E1E6;
+    }
+
+    .fb, .fb:focus {
+        background-color: #3C5A98;
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+
+    .gl, .gl:focus {
+        background-color: #ff8000;
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+
+    .tw:hover {
+        background-color: #b1f0f3;
+    }
+
+    .fb:hover {
+        background-color: #879bc3;
+    }
+
+    .gl:hover {
+        background-color: #ff5000;
+    }
+
+    .tw:before {
+        content: "t";
+        background: #91cfd3;
+        background: rgba(0,0,0,.1);
+        color: #fff;
+        font-family: verdana;
+        text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+
+    .fb:before {
+        content: "f";
+        background: #4467ac;
+        background: rgba(0,0,0,.1);
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+
+    .gl:before {
+        content: "G";
+        background: #ff6000;
+        background: rgba(0,0,0,.1);
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+
+

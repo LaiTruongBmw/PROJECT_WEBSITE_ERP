@@ -1,0 +1,536 @@
+.erp-fonts
+{
+	font-family: Tahoma;
+	margin: 0px 0px 0px 0px;
+}
+
+.erp-fonts-nm{
+	font-family: Tahoma;
+	font-size: 14px;
+}
+
+div .box_left_top{
+	border-top: 0px solid #a4bed4;
+	border-left: 0px solid #a4bed4;
+	border-right: 1px solid #a4bed4;
+	border-bottom: 1px solid #a4bed4;
+	width: 12%; height: 80px;
+	background-color: #daeef3;
+	text-align: center;
+	float:left;
+}
+div .box_right_top{
+	border-top: 0px solid #a4bed4;
+	border-left: 0px solid #a4bed4;
+	border-right: 0px solid #a4bed4;
+	border-bottom: 1px solid #a4bed4;
+	width: 100px; height: 80px;
+	background-color: #ffffff;
+	text-align: center;
+	float:left;
+}
+ div .box_top{
+	border-top: 0px solid #a4bed4;
+	border-left: 0px solid #a4bed4;
+	border-right: 1px solid #a4bed4;
+	border-bottom: 1px solid #a4bed4;
+	width: 12%; height: 80px;
+	background-color: #ffffff;
+	text-align: center;
+	float:left;
+}
+.span_day{
+	color:#ffaaff  !important;
+	cursor: pointer;
+}
+div .box_left_bottom{
+	border-top: 0px solid #a4bed4;
+	border-left: 0px solid #a4bed4;
+	border-right: 1px solid #a4bed4;
+	border-bottom: 0px solid #a4bed4;
+	width: 100px; height: 80px;
+	background-color: #daeef3;
+	text-align: center;
+	float:left;
+}
+div .box_right_bottom{
+	border-top: 0px solid #a4bed4;
+	border-left: 0px solid #a4bed4;
+	border-right: 0px solid #a4bed4;
+	border-bottom: 0px solid #a4bed4;
+	width: 100px; height: 80px;
+	background-color: #ffffff;
+	text-align: center;
+	float:left;
+}
+div .box_bottom{
+	border-top: 0px solid #a4bed4;
+	border-left: 0px solid #a4bed4;
+	border-right: 1px solid #a4bed4;
+	border-bottom: 0px solid #a4bed4;
+	width: 100px; height: 80px;
+	background-color: #ffffff;
+	text-align: center;
+	float:left;
+}
+
+div .box_day{
+	background-color: #4f81bd;
+	width: 80%; height: 65px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 2px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#ffffff;
+}
+div .box_active{
+	border: 2px solid #ff003e !important;
+}
+
+div .box_food_A{
+	background-color: #fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_A div{
+	padding-top: 10px;
+	color:#ffffff;
+	line-height: 15px;
+	width: 95%;
+}
+
+
+div .box_food_item{
+	background-color: #fac090;
+	width: 90px; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_item div{
+	padding-top: 10px;
+	color:#ffffff;
+	line-height: 15px;
+	width: 95%;
+}
+div .box_food_M{
+	background-color: #fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_M div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_A1{
+	background-color:#fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_A1 div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_A2{
+	background-color: #fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_A2 div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_A3{
+	background-color: #fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_A3 div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_A4{
+	background-color: #fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_A4 div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_A5{
+	background-color:#fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_A5 div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_A6{
+	background-color: #fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_A6 div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_A7{
+	background-color:#fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_A7 div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+
+div .box_food_A0{
+	background-color: #fac090;
+	width: 80%; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_A0 div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+
+div .box_food_B{
+	background-color: #ccc1da;
+	width: 90px; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_B div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_C{
+	background-color: #77933c;
+	width: 90px; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_C div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_D{
+	background-color: #ffff00;
+	width: 90px; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_D div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_E{
+	background-color: #ea6b52;
+	width: 90px; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#000000;
+}
+
+div .box_food_E div{
+	padding-top: 10px;
+	color:#000000;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_F{
+	background-color: #953735;
+	width: 90px; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#ffffff;
+}
+
+div .box_food_F div{
+	padding-top: 10px;
+	color:#ffffff;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .box_food_G{
+	background-color: #2F4F4F;
+	width: 90px; height: 70px;
+	display: inline-block;
+	margin-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 0px solid #385d8a;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+div .box_food_G div{
+	padding-top: 10px;
+	color:#FFFFFF;
+	line-height: 15px;
+	width: 95%;
+}
+
+div .bg_search{
+	background-color: #ffffff;
+	border-bottom: 1px solid #a4bed4;
+	/*height: 113px; pp*/
+	width: 100%;
+}
+
+div .bt_search{
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+#btnConsumption{
+	color:red;
+}
+
+div .box_top_sh{
+	border-top: 0px solid #a4bed4;
+	border-left: 0px solid #a4bed4;
+	border-right: 1px solid #a4bed4;
+	border-bottom: 1px solid #a4bed4;
+	width: 32%; height: 80px;
+	background-color: #ffffff;
+	text-align: center;
+	float:left;
+}
+
+div .box_top_right_sh{
+	border-top: 1px solid #a4bed4;
+	border-left: 1px solid #a4bed4;
+	border-right: 1px solid #a4bed4;
+	border-bottom: 1px solid #a4bed4;
+	width: 112px; height: 80px;
+	background-color: #ffffff;
+	text-align: center;
+	float:left;
+}
+
+div .box_bottom_sh{
+	border-top: 0px solid #a4bed4;
+	border-left: 0px solid #a4bed4;
+	border-right: 1px solid #a4bed4;
+	border-bottom: 0px solid #a4bed4;
+	width: 112px; height: 80px;
+	background-color: #ffffff;
+	text-align: center;
+	float:left;
+}
+
+div .box_bottom_right_sh{
+	border-top: 0px solid #a4bed4;
+	border-left: 0px solid #a4bed4;
+	border-right: 0px solid #a4bed4;
+	border-bottom: 0px solid #a4bed4;
+	width: 112px; height: 80px;
+	background-color: #ffffff;
+	text-align: center;
+	float:left;
+}
+
+#box_action{
+	border: 1px solid #a4bed4;
+	box-sizing: content-box;
+}
+
+
